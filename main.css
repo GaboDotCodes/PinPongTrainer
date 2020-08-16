@@ -1,0 +1,23 @@
+* {
+  border: 0;
+  padding: 0;
+}
+
+#trainerControl {
+  background-color: aqua;
+  height: 5vh;
+}
+
+#mainSection {
+  background-color: aqua;
+  height: 90vh;
+}
+
+#formControl {
+  height: 100%;
+}
+
+#periode {
+  background-color: red;
+  width: 100%;
+}
