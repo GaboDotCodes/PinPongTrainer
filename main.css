@@ -9,7 +9,7 @@
 }
 
 #mainSection {
-  height: 75vh;
+  height: 70vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -50,4 +50,24 @@
   width: 3em;
   height: 3em;
   font-size: 2em;
+}
+
+#loaderBg {
+  border: 5px solid blue;
+  height: 30px;
+}
+
+#loaderBar {
+  background-color: blue;
+  height: 30px;
+  width: 0%;
+}
+
+@keyframes fillBar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }

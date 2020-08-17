@@ -3,30 +3,28 @@ const periodeNumber = document.getElementById("periodeNumber");
 const periode = document.getElementById("periode");
 const substracTime = document.getElementById("substracTime");
 const addTime = document.getElementById("addTime");
+const loaderBar = document.getElementById("loaderBar");
+
 periodeNumber.innerHTML = periode.value;
 let interval = parseInt(periodeNumber.innerHTML);
 
 periode.addEventListener("input", () => {
   periodeNumber.innerHTML = periode.value;
+});
+
+periode.addEventListener("change", () => {
   interval = parseInt(periode.value);
   timerInterval.set_interval(interval);
 });
 
+/*
 addTime.addEventListener("click", (e) => {
   e.preventDefault();
   periode.value = parseInt(periode.value) + 100;
   periodeNumber.innerHTML = periode.value;
   interval = parseInt(periode.value);
-  timerInterval.set_interval(interval);
 });
-
-substracTime.addEventListener("click", (e) => {
-  e.preventDefault();
-  periode.value = parseInt(periode.value) - 100;
-  periodeNumber.innerHTML = periode.value;
-  interval = parseInt(periode.value);
-  timerInterval.set_interval(interval);
-});
+*/
 
 function timer() {
   var timer = {
@@ -61,12 +59,22 @@ function timer() {
   return timer;
 }
 
-var timerInterval = new timer();
+const timerInterval = new timer();
+
 timerInterval.start(
   () => {
     const randomNumber = Math.ceil(Math.random() * 6);
     number.innerHTML = randomNumber;
+    loaderBar.animate([{ width: "0%" }, { width: "100%" }], {
+      duration: interval,
+      fill: "forwards",
+    });
   },
   interval,
   false
 );
+
+loaderBar.animate([{ width: "0%" }, { width: "100%" }], {
+  duration: interval,
+  fill: "forwards",
+});
