@@ -66,7 +66,6 @@ timerInterval.start(
   () => {
     const randomNumber = Math.ceil(Math.random() * 6);
     number.innerHTML = randomNumber;
-    console.log(interval);
   },
   interval,
   false
