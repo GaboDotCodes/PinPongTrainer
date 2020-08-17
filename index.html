@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>Ping Pong Trainer</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="main.css">
-  <title>Ping Pong Trainer</title>
-</head>
-
-<body>
-  <div id="trainerControl">
-    <form id="formControl">
-      <input type="range" name="" id="periode" min="500" max="5000">
-      <button class="button">-</button>
-      <input type="number">
-      <button class="button">+</button>
-    </form>
-  </div>
-  <div id="mainSection">
-    <h1 id="mainNumber">1</h1>
-  </div>
-
-  <script src="main.js"></script>
-</body>
-
+  <body>
+    <div id="trainerControl">
+      <form id="formControl">
+        <div id="periodeControl">
+          <input type="range" id="periode" min="500" max="5000" step="100" />
+        </div>
+        <div id="controls">
+          <button class="button" id="substracTime">-</button>
+          <h1 id="periodeNumber"></h1>
+          <button class="button" id="addTime">+</button>
+        </div>
+      </form>
+    </div>
+    <div id="mainSection">
+      <p id="mainNumber">1</p>
+    </div>
+    <div id="loader">
+      <div></div>
+    </div>
+    <script src="main.js"></script>
+  </body>
 </html>

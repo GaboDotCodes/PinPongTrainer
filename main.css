@@ -1,23 +1,53 @@
 * {
   border: 0;
   padding: 0;
-}
-
-#trainerControl {
-  background-color: aqua;
-  height: 5vh;
-}
-
-#mainSection {
-  background-color: aqua;
-  height: 90vh;
+  font-family: "Alata", sans-serif;
 }
 
 #formControl {
   height: 100%;
 }
 
+#mainSection {
+  height: 75vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#mainNumber {
+  font-size: 30em;
+}
+
+#periodeControl {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 #periode {
   background-color: red;
-  width: 100%;
+  width: 90%;
+  height: 4em;
+}
+
+#periodeNumber {
+  display: inline;
+  font-size: 2em;
+}
+
+#controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  margin: 0 2em 0 2em;
+  width: 3em;
+  height: 3em;
+  font-size: 2em;
 }
