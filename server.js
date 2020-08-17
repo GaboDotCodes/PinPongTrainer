@@ -3,4 +3,6 @@ const app = express();
 
 app.use(express.static("public"));
 
-app.listen(8080);
+app.listen(3000, () => {
+  console.log("Server on http://localhost:3000");
+});
