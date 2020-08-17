@@ -12,19 +12,17 @@ periode.addEventListener("input", () => {
   periodeNumber.innerHTML = periode.value;
 });
 
-periode.addEventListener("change", () => {
-  interval = parseInt(periode.value);
-  timerInterval.set_interval(interval);
-});
-
-/*
 addTime.addEventListener("click", (e) => {
   e.preventDefault();
   periode.value = parseInt(periode.value) + 100;
   periodeNumber.innerHTML = periode.value;
-  interval = parseInt(periode.value);
 });
-*/
+
+substracTime.addEventListener("click", (e) => {
+  e.preventDefault();
+  periode.value = parseInt(periode.value) - 100;
+  periodeNumber.innerHTML = periode.value;
+});
 
 function timer() {
   var timer = {
@@ -65,6 +63,8 @@ timerInterval.start(
   () => {
     const randomNumber = Math.ceil(Math.random() * 6);
     number.innerHTML = randomNumber;
+    interval = parseInt(periode.value);
+    timerInterval.set_interval(interval);
     loaderBar.animate([{ width: "0%" }, { width: "100%" }], {
       duration: interval,
       fill: "forwards",
